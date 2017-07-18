@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My A-Frame Scene</title>
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src="vrplayer.js"></script>
+</head>
+
+ <body>
+    <a-scene>
+      <a-assets>
+        <video id="video_1" src="https://s3.ap-northeast-2.amazonaws.com/videosforlandingpage0525/test.mp4"></video>
+      </a-assets>
+
+      <a-camera position="0 0 0">
+          <a-cursor id="cursor" color="yellow"></a-cursor>
+      </a-camera>
+
+      <a-videosphere onclick="uiModal" src="#video_1" rotation="0 180 0"></a-videosphere>
+
+      <a-entity id='ts' video-controls="src:#video_1"></a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
