@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My A-Frame Scene</title>
+  <title>A-Frame video player</title>
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="vrplayer.js"></script>
 </head>
@@ -13,10 +13,10 @@
       </a-assets>
 
       <a-camera position="0 0 0">
-          <a-cursor id="cursor" color="yellow"></a-cursor>
+          <a-cursor fuse="true" fuseTimeout=500 id="cursor" color="yellow"></a-cursor>
       </a-camera>
 
-      <a-videosphere onclick="uiModal" src="#video_1" rotation="0 180 0"></a-videosphere>
+      <a-videosphere src="#video_1" rotation="0 180 0"></a-videosphere>
 
       <a-entity id='ts' video-controls="src:#video_1"></a-entity>
 
